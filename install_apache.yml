@@ -8,3 +8,13 @@
     apt:
       name: apache2
       state: latest
+
+  - name: Set Time-Zone to Africa/Lagos
+    timezone:
+      name: Africa/Lagos
+
+  - name: Copy PHP File
+    copy:
+      src: /home/vagrant/ansible/index.php
+      dest: /var/www/html/index.html
+      mode: '0644'
