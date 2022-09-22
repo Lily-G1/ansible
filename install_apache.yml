@@ -7,6 +7,4 @@
   - name: Install Apache2 Package
     apt:
       name: apache2
-      state: present
-  - name: Copy PHP file
-    command: cp /home/vagrant/ansible/index.php /var/www/php/index.php
+      state: latest
