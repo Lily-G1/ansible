@@ -3,7 +3,7 @@
 <body>
 
 <?php
-echo "Hello World!";
+    date("F d, Y h:i:s A e", time());
 ?>
 
 </body>
