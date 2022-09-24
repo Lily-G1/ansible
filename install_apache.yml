@@ -4,6 +4,10 @@
   become: true
 
   tasks:
+  - name: Update Repository
+    apt:
+      update_cache: yes
+
   - name: Install Apache2 Package
     apt:
       name: apache2
@@ -15,6 +19,6 @@
 
   - name: Copy PHP File
     copy:
-      src: /home/vagrant/ansible/index.php
-      dest: /var/www/html/index.html
-      mode: '0644'
+      src: ~/ansible/index.php
+      dest: /var/www/html/index.php
+      mode: 0644
