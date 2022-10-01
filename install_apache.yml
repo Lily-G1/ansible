@@ -1,10 +1,10 @@
 ---
-- name: Setup Web Server
-  hosts: all
+
+- hosts: all
   become: true
 
   tasks:
-  - name: Install Apache2 & PHP Packages for Ubuntu Server
+  - name: Install Apache & PHP Packages for Ubuntu Server
     apt:
       name:
         - apache2
