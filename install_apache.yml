@@ -4,20 +4,19 @@
   become: true
 
   tasks:
-  - name: Update Repository
+  - name: Install Apache2 & PHP Packages for Ubuntu Server
     apt:
-      update_cache: yes
-
-  - name: Install Apache2 Package
-    apt:
-      name: apache2
+      name:
+        - apache2
+        - libapache2-mod-php
       state: latest
+      update_cache: yes
 
   - name: Set Time-Zone to Africa/Lagos
     timezone:
       name: Africa/Lagos
 
-  - name: Copy PHP File
+  - name: Copy PHP Index File
     copy:
       src: ~/ansible/index.php
       dest: /var/www/html/index.php
