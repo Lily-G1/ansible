@@ -16,8 +16,10 @@
     timezone:
       name: Africa/Lagos
 
-  - name: Copy PHP Index File
+  - name: Copy PHP Index File for Site
     copy:
-      src: ~/ansible/index.php
+      src: ~/ansible/php_file/index.php
       dest: /var/www/html/index.php
+      owner: root
+      group: root
       mode: 0644
